@@ -1,11 +1,26 @@
 # flutter_hover_button
 
 Reusable button with hover animation
+
+<table>
+  <tr>
+    <th> BUTTON 1 </th>
+    <th> BUTTON 2 </th>
+  </tr>
+  <tr>
+    <td>
+      <img src="Screen Shot 2021-01-19 at 00.26.27.png" alt="" width="200"/>
+    </td>
+    <td>
+      <img src="Screen Shot 2021-01-19 at 00.26.37.png" alt="" width="200"/>
+    </td>
+  </tr>
+</table>
+
 - [The live version is in my Flutter CodePen](https://codepen.io/mt-tadayon/pen/bGVpjzg)
 - [The original CodePen is from Chris Deacy, which is created with HTML, CSS and JS](https://codepen.io/chrisdothtml/pen/waKBdM)
 
-
-## Getting Started
+## Getting Started  
 
 This project is a starting point for a Flutter application.
 

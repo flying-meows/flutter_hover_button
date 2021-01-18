@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:html' as html;
 
 void main() {
   runApp(MyApp());
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -42,6 +44,22 @@ class Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ButtonColors.backgroundColor,
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text('Fill Horizontal'),
+        backgroundColor: Color(0xFF5C92A6),
+      ),
+      floatingActionButton: Container(
+        height: 50,
+        width: 50,
+        child: FloatingActionButton(
+          backgroundColor: Color(0xFF5C92A6),
+          child: Icon(Icons.open_in_new),
+          onPressed: () {
+            html.window.open('https://myracledesign.de/blog', 'MyracleDesign');
+          },
+        ),
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -118,14 +136,14 @@ class _AnimatedButtonState extends State<AnimatedButton>
     );
     _animation = Tween(begin: 0.0, end: 500.0)
         .animate(CurvedAnimation(curve: Curves.easeIn, parent: _controller))
-      ..addListener(() {
-        setState(() {});
-      });
+          ..addListener(() {
+            setState(() {});
+          });
     _borderAnimation =
         ColorTween(begin: ButtonColors.defaultColor, end: widget.animationColor)
             .animate(
-          CurvedAnimation(curve: Curves.easeInOut, parent: _controller),
-        );
+      CurvedAnimation(curve: Curves.easeInOut, parent: _controller),
+    );
   }
 
   @override
